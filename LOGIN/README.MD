@@ -1,0 +1,1 @@
+A basic login page that shows a pop up while loading and has JavaScript functionalities.

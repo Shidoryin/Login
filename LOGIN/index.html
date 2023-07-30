@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roundcube Webmail</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        * {
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto';
+        }
+
+        .loginWrap {
+            margin: auto;
+            width: 20%;
+            text-align: center;
+        }
+
+        .loginWrap span {
+            color: #737677;
+            font-size: 14px;
+        }
+
+
+        .roundCubeSvg {
+            margin-top: 173px;
+            margin-bottom: 45px;
+            text-align: center;
+        }
+
+        input:focus {
+            outline: 2px solid #7bc0e2;
+            box-shadow: 0px 0px 0px 2.799999952316284px rgba(55, 190, 255, 0.25);
+            ;
+        }
+
+
+        #loginForm input {
+            padding-inline: 14px;
+            padding-block: 10px;
+            border: 1px solid #CED4DA;
+            width: 100%;
+            border-top-right-radius: 4.2px;
+            border-bottom-right-radius: 4.2px;
+            font-size: 17.5px;
+            color: black;
+        }
+
+        .userNameInputWrap,
+        .passwordInputWrap {
+            display: flex;
+            margin-bottom: 12px;
+        }
+
+        .userNameSvg,
+        .passwordSvg {
+            background-color: #F1F3F4;
+            padding-inline: 18px;
+            padding-block: 12px;
+            border-top-left-radius: 4.2px;
+            border-bottom-left-radius: 4.2px;
+        }
+
+        #loginBtn {
+            width: 100%;
+            padding-block: 10px;
+            font-size: 17.5px;
+            color: #fff;
+            background-color: #37BEFF;
+            border-radius: 4.2px;
+            margin-bottom: 15px;
+        }
+         #loading{
+            position: fixed;
+            margin-top: 255px;
+            background-color: #737677;
+            width: 100%;
+            padding: 1%;
+            color: #beced4;
+        }
+        
+         #loading1{
+            position: fixed;
+            margin-top: 255px;
+            background-color: orange;
+            width: 100%;
+            padding: 1%;
+            color: #beced4;
+        }
+         #loading2{
+            position: fixed;
+            margin-top: 255px;
+            background-color: red;
+            width: 100%;
+            padding: 1%;
+            color: #beced4;
+        }
+
+
+        @media screen and (max-width:1550px) {
+            .loginWrap {
+                width: 25%;
+            }
+        }
+
+        @media screen and (max-width:1235px) {
+            .loginWrap {
+                width: 30%;
+            }
+        }
+
+        @media screen and (max-width:990px) {
+            .loginWrap {
+                width: 35%;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            .loginWrap {
+                width: 40%;
+            }
+        }
+
+        @media screen and (max-width:700px) {
+            .loginWrap {
+                width: 45%;
+            }
+        }
+
+        @media screen and (max-width:630px) {
+            .loginWrap {
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .loginWrap {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loginWrap">
+        <div class="roundCubeSvg">
+            <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_4)">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M100 71.4183L49.9991 42.5383V11.7129L100 40.5946V71.4183Z" fill="#37BEFF" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 71.4183L49.9991 42.5383V11.7129L0 40.5946V71.4183Z" fill="#404F54" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M49.9991 0.299988C69.0979 0.299988 84.5864 15.7885 84.5864 34.8873C84.5864 53.986 69.0979 69.4746 49.9991 69.4746C30.9004 69.4746 15.4118 53.986 15.4118 34.8873C15.4118 15.7885 30.9004 0.299988 49.9991 0.299988Z"
+                        fill="#CCCCCC" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M49.9991 0.299988C69.1049 0.299988 84.5986 15.7885 84.5986 34.8873C84.5986 53.986 69.1049 69.4746 49.9991 69.4746C39.0325 62.0938 34.4949 47.2241 34.4949 34.9065C34.4949 22.5888 39.0325 7.69474 49.9991 0.299988Z"
+                        fill="#E5E5E5" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M100 40.5946L49.9991 69.4746V100.3L100 71.4183V40.5946Z" fill="#37BEFF" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 40.5946L49.9991 69.4746V100.3L0 71.4183V40.5946Z" fill="#404F54" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_1_4">
+                        <rect width="100" height="100" fill="white" transform="translate(0 0.299988)" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <form action="#" method="post" id="loginForm">
+            <div class="userNameInputWrap">
+                <div class="userNameSvg">
+                    <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7 8.14501C4.86445 8.14501 3.15 6.43056 3.15 4.29501C3.15 2.18954 4.86445 0.445014 7 0.445014C9.10547 0.445014 10.85 2.18954 10.85 4.29501C10.85 6.43056 9.10547 8.14501 7 8.14501ZM9.67695 9.10751C11.9027 9.10751 13.7375 10.9423 13.7375 13.1681V14.4013C13.7375 15.2134 13.0758 15.845 12.2937 15.845H1.70625C0.894141 15.845 0.2625 15.2134 0.2625 14.4013V13.1681C0.2625 10.9423 2.06719 9.10751 4.29297 9.10751H4.8043C5.46602 9.43837 6.21797 9.58876 7 9.58876C7.78203 9.58876 8.50391 9.43837 9.16563 9.10751H9.67695Z"
+                            fill="#2C363A" />
+                    </svg>
+
+                </div>
+                <input type="text" name="userName" id="userName" class="userNameInput" placeholder="Username">
+            </div>
+            <div class="passwordInputWrap">
+                <div class="passwordSvg">
+                    <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.2937 7.43251C13.0758 7.43251 13.7375 8.09423 13.7375 8.87626V14.6513C13.7375 15.4634 13.0758 16.095 12.2937 16.095H1.70625C0.894141 16.095 0.2625 15.4634 0.2625 14.6513V8.87626C0.2625 8.09423 0.894141 7.43251 1.70625 7.43251H2.42813V5.26689C2.42813 2.7704 4.47344 0.695014 7 0.695014C9.49648 0.695014 11.5719 2.7704 11.5719 5.26689V7.43251H12.2937ZM9.16563 7.43251V5.26689C9.16563 4.09384 8.17305 3.10126 7 3.10126C5.79688 3.10126 4.83438 4.09384 4.83438 5.26689V7.43251H9.16563Z"
+                            fill="#2C363A" />
+                    </svg>
+
+
+                </div>
+                <input type="password" name="password" id="password" class="passwordInput" placeholder="Password">
+            </div>
+            <button id="loginBtn" type="submit">LOGIN</button>
+            <span>Roundcube Webmail</span>
+        </form>
+    </div>
+    <div id="loading" style="display: none;">
+        <p>Loading...</p>
+    </div>
+    <div id="loading1"style="display: none;">
+        Successful
+    </div>
+    <div id="loading2" style="display: none;">
+        Incorrect try again
+    </div>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
